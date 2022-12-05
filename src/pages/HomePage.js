@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 const HomePage=()=>{
     const [games,setGames]=useState([]);
-    const [allInfo,setAllInfo]=useState([])
     const apiKey='ddca4f81c1df4add8fda3feb725a7019';
     const [page,setPage]=useState(`https://api.rawg.io/api/games?key=${apiKey}`)
     //fetching all games from api
@@ -16,7 +15,7 @@ const HomePage=()=>{
             preloaderOff();
             const parseRes=await response.json();
             console.log(parseRes);
-            setAllInfo(parseRes)
+            setPage(parseRes.next)
             setGames(parseRes.results);
         } catch (error) {
             preloaderOff();
@@ -28,7 +27,6 @@ const HomePage=()=>{
     },[])
     const loadMore=()=>{
         fetchGames();
-        setPage(allInfo.next)
     }
      //preloader
     const preloader=()=>{
