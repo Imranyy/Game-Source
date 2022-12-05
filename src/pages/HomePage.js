@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 const HomePage=()=>{
     const [games,setGames]=useState([]);
     //fetching all games from api
@@ -37,26 +38,17 @@ const HomePage=()=>{
             <div className="start home">
                 <div className='grid-home'>
                 {games?games.map((game)=>(
-                    <div key={game.id} className="card">
+                    <Link to={`/game/${game.id}`} key={game.id} className="card">
                         <div className="card-image"><img src={game.background_image} alt='...'/></div>
                         <div className="card-content">
                             <div className="card-header">
-                                <div className='platform'>
-                                {game.platforms.map(plat=>(
-                                    <div key={plat.id}>
-                                        {/* <img src={plat.platform.image_background} width='50'/> */}
-                                        <small>{plat.platform.name}</small>
-                                    </div>
-                                ))}
-                                </div>
                                 <h2>{game.name}</h2>
-                            </div>  
+                            </div> <br/> 
                             <div className="card-text">
-                                <p>{game.name}</p>
                                 <p>Rating: {game.rating}</p>
                             </div>  
                         </div>
-                    </div>
+                    </Link>
                     )):(<p>No games</p>)}
                 </div>
             </div>

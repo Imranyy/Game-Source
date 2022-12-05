@@ -3,9 +3,9 @@
 *{padding: 0;
   margin: 0;
   font-family: 'Quicksand', sans-serif;
-  color: hsl(210, 10%, 62%);
 }
 body{
+  color: hsl(210, 10%, 62%);
   background:  #393b3d;
 }
 .preload{
@@ -30,11 +30,16 @@ nav{
   padding: 10px 0 0 5%;
 }
 nav .navbar-brand a{
-   font-family: 'Kenia';
-   font-weight: 500;
-   font-size: 50px;
-   cursor: pointer;
-   text-decoration: none;
+  font-family: 'Kenia';
+  font-weight: 500;
+  font-size: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  color: hsl(210, 10%, 62%);
+}
+a{
+  text-decoration: none;
+  color: hsl(210, 10%, 62%);
 }
 .navbar-brand a:hover{
   color: white;
@@ -48,6 +53,7 @@ nav ul li{
   margin-left: 20px;
 }
 li a{
+  color: hsl(210, 10%, 62%);
   text-decoration: none;
   font-weight: 500;
   font-size: 17px;
@@ -73,10 +79,11 @@ nav .navbar-brand:hover{
   background: black;
   cursor: pointer;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  transition: ease-out 0.8s;
+  transition: ease-out 0.2s;
 }
 .card:hover{
   background: rgba(10, 10, 0, 0.5);
+  color: white;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 .card-image img{
@@ -84,7 +91,7 @@ nav .navbar-brand:hover{
   height: 200px;
 }
 .card-content{
-  width:min-content;
+  width:200px;
   padding: 5px 0 10px 20px;
 }
 
