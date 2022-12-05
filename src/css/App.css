@@ -6,8 +6,18 @@
   color: hsl(210, 10%, 62%);
 }
 body{
-  /* background: url('../media/nintendo-switch.webp') no-repeat; */
   background:  #393b3d;
+}
+.preload{
+  background: white url('../media/Loading_icon.gif') no-repeat center;
+  background-size: 200px;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  z-index: 2;
+  display: none;
 }
 nav{
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
@@ -74,6 +84,7 @@ nav .navbar-brand:hover{
   height: 200px;
 }
 .card-content{
+  width:min-content;
   padding: 5px 0 10px 20px;
 }
 
@@ -88,9 +99,9 @@ footer{
   background: bisque;
 }
 
-/* @supports(backdrop-filter: blur(2rem)){
+@supports(backdrop-filter: blur(2rem)){
   nav{
     background: hsl(0 0% 100% / 0.1);
-    backdrop-filter: blur(2rem);
+    backdrop-filter: blur(3rem);
   }
-} */
+}
