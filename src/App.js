@@ -8,18 +8,20 @@ import GamePage from './pages/GamePage';
 import NotFound from './pages/NotFound';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import { Toaster } from 'react-hot-toast';
 const App=()=>{
   return (
     <Router>
-    <Navbar/>
-      <Routes>
-        <Route path='/' element={<HomePage/>}/>
-        <Route path='/register' element={<RegisterPage/>}/>
-        <Route path='/login' element={<LoginPage/>}/>
-        <Route path='/game/:id' element={<GamePage/>}/>
-        <Route path='*' element={<NotFound/>}/>
-      </Routes>
-    <Footer/>
+      <Toaster/>
+        <Navbar/>
+          <Routes>
+            <Route path='/' element={<HomePage/>}/>
+            <Route path='/register' element={<RegisterPage/>}/>
+            <Route path='/login' element={<LoginPage/>}/>
+            <Route path='/game/:id' element={<GamePage/>}/>
+            <Route path='*' element={<NotFound/>}/>
+          </Routes>
+        <Footer/>
   </Router>
   );
 }

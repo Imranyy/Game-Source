@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
 const HomePage=()=>{
     const [games,setGames]=useState([]);
@@ -19,6 +20,7 @@ const HomePage=()=>{
             setGames(parseRes.results);
         } catch (error) {
             preloaderOff();
+            toast.error(error.message);
             console.log(error.message);
         }
     }
@@ -56,7 +58,9 @@ const HomePage=()=>{
                     </Link>
                     )):(<p>No games</p>)}
                 </div>
-                <button onClick={loadMore}>Load More</button>
+            </div>
+            <div className='loadBtn'>
+            <button  onClick={loadMore}>Load More Games</button>
             </div>
 
         </>

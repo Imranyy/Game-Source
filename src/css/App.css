@@ -6,7 +6,7 @@
 }
 body{
   color: hsl(210, 10%, 62%);
-  background:  #393b3d;
+  background:  #2d3030;
 }
 .preload{
   background: white url('../media/Loading_icon.gif') no-repeat center;
@@ -19,9 +19,13 @@ body{
   z-index: 2;
   display: none;
 }
-button{
-  margin-top: 20px;
-  width:100px;
+.loadBtn{
+  display: flex;
+  justify-content: center;
+  padding: 0 0 50px 0;
+}
+.loadBtn button{
+  width:120px;
   height: 50px;
   cursor: pointer;
   color: #393b3d;
@@ -60,11 +64,19 @@ a{
   color: white;
 }
 nav ul{
+  position: fixed;
   display: flex;
-  margin: 20px 5% 20px 50% ;
+  top:20px;
+  right: 20px;
+  bottom: 20px;
 }
 nav ul li{
   list-style: none;
+  margin-left: 20px;
+} 
+nav ul .menuBtn{
+  font-weight: 500;
+  display: none;
   margin-left: 20px;
 }
 li a{
@@ -79,6 +91,15 @@ li a:hover{
 }
 nav .navbar-brand:hover{
   color: white;
+}
+.nav-menu{
+ display: none;
+}
+.nav-menu .close-menu{
+ display: none;
+}
+.nav-menu ul{
+ display: none;
 }
 .start{
   margin: 90px 0 50px 50px;
@@ -109,7 +130,22 @@ nav .navbar-brand:hover{
   width:200px;
   padding: 5px 0 10px 20px;
 }
-
+.game-detail-page{
+  /* padding: 0 0 0 20px; */
+  display: grid;
+  grid-template-columns: auto 500px;
+}
+.game-detail-page h2{
+  font-weight: 900;
+  font-size: 50px;
+}
+.game-detail-page p{
+  margin-right: 50px;
+  width: fit-content;
+}
+.game-detail-page .game-detail-item img{
+  border-radius: 10px;
+}
 /* footer */
 footer{
   display: none;
@@ -124,6 +160,6 @@ footer{
 @supports(backdrop-filter: blur(2rem)){
   nav{
     background: hsl(0 0% 100% / 0.1);
-    backdrop-filter: blur(3rem);
+    backdrop-filter: blur(4rem);
   }
 }
