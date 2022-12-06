@@ -50,7 +50,8 @@
         display: block;
         position: fixed;
         right: 20px;
-        cursor: pointer;
+        cursor: pointer; 
+        font-size: 20px;
       }
       nav ul .menuBtn:hover{
         color: white;
@@ -71,12 +72,22 @@
         position: fixed;
         right: 20px;
         top: 20px;
+        font-size: 20px;
+        font-weight: 900px;
+    }
+    .nav-menu .close-menu:hover{
+      color: white;
     }
     .nav-menu ul{
         display: flex;
         list-style: none;
         flex-direction: column;
         padding: min(3rem, 30vh) ;
+    }
+    .nav-menu ul li{
+      font-size: 34px;
+      font-weight: 900;
+      padding: 20px 0 0 0;
     }
     .game-detail-page{
         padding: 0 0 0 20px;
@@ -100,6 +111,7 @@
         grid-template-columns: repeat(1,1fr);
         row-gap: 20px;
       }
+      
       .game-detail-page{
         padding: 0 0 0 20px;
         display: grid;

@@ -12,10 +12,10 @@ const Navbar=()=>{
                 <div className='navbar-brand'><Link to='/'>Game source</Link></div>
                 <ul>
                     <li>
-                        <Link to='/dashboard'>Profile</Link>
+                        <Link to='/'>Home</Link>
                     </li>
                     <li>
-                        <Link to='/'>Home</Link>
+                        <Link to='/dashboard'>Profile</Link>
                     </li>
                     <li>
                         <Link to='/register'>Register</Link>
@@ -31,10 +31,10 @@ const Navbar=()=>{
                     <div className='close-menu' onClick={closeMenu}>Close</div>
                     <ul>
                         <li>
-                            <Link to='/dashboard' onClick={closeMenu}>Profile</Link>
+                            <Link to='/' onClick={closeMenu}>Home</Link>
                         </li>
                         <li>
-                            <Link to='/' onClick={closeMenu}>Home</Link>
+                            <Link to='/dashboard' onClick={closeMenu}>Profile</Link>
                         </li>
                         <li>
                             <Link to='/register' onClick={closeMenu}>Register</Link>
