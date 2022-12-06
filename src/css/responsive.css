@@ -111,6 +111,10 @@
         grid-template-columns: repeat(1,1fr);
         row-gap: 20px;
       }
+      .grid-home .card img{
+        width: 500px;
+        height: 300px;
+      }
       
       .game-detail-page{
         padding: 0 0 0 20px;
@@ -124,6 +128,15 @@
       }
 }
 @media screen and (max-width:500px) {
+  .grid-home{
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 20px;
+  }
+  .grid-home .card img{
+    width: 300px;
+    height: 200px;
+  }
     .game-detail-page{
         width: fit-content;
         padding: 0 0 0 20px;
