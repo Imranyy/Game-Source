@@ -55,7 +55,7 @@ const RegisterPage=()=>{
                 <label>Confirm Password</label>
                 <input type='password' onChange={(e)=>setConfirmPassword(e.target.value)} required/>
                 <div>
-                <button>Submit</button>
+                <button>Sign up</button>
                 <Link style={{paddingLeft:'100px',textDecoration:'underline'}} to='/login'>Sign in</Link>
                 </div>
             </form>

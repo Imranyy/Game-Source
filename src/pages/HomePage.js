@@ -9,14 +9,13 @@ const HomePage=()=>{
     const fetchGames=async()=>{
         try {
             preloader();
-            const url=page;
-            const response=await fetch(url,{
+            const response=await fetch(page,{
                 method:'GET'
             })
             preloaderOff();
             const parseRes=await response.json();
             console.log(parseRes);
-            setPage(parseRes.next)
+            setPage(parseRes.next);
             setGames(parseRes.results);
         } catch (error) {
             preloaderOff();
@@ -29,6 +28,7 @@ const HomePage=()=>{
     },[])
     const loadMore=()=>{
         fetchGames();
+        document.querySelector('.home').scrollIntoView();
     }
      //preloader
     const preloader=()=>{
