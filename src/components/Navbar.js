@@ -18,10 +18,7 @@ const Navbar=()=>{
                         <Link to='/dashboard'>Profile</Link>
                     </li>
                     <li>
-                        <Link to='/register'>Register</Link>
-                    </li>
-                    <li>
-                        <Link to='/login'>Login</Link>
+                        <Link to='/login'>Sign in</Link>
                     </li>
                     <div className='menuBtn' onClick={showMenu}>Menu</div>
                 </ul>
@@ -37,10 +34,7 @@ const Navbar=()=>{
                             <Link to='/dashboard' onClick={closeMenu}>Profile</Link>
                         </li>
                         <li>
-                            <Link to='/register' onClick={closeMenu}>Register</Link>
-                        </li>
-                        <li>
-                            <Link to='/login' onClick={closeMenu}>Login</Link>
+                            <Link to='/login' onClick={closeMenu}>Sign in</Link>
                         </li>
                     </ul>
                 </div>

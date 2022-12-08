@@ -115,7 +115,6 @@
         width: 500px;
         height: 300px;
       }
-      
       .game-detail-page{
         padding: 0 0 0 20px;
         display: grid;
@@ -156,5 +155,9 @@
     .nav-menu{
       background: hsl(0 0% 100% / 0.1);
       backdrop-filter: blur(10rem);
+    }
+    .register form,.login form{
+      background: hsl(0 0% 100% / 0.1);
+      backdrop-filter: blur(1rem);
     }
   }
