@@ -41,6 +41,11 @@
         font-size: 30px;
         width: 550px;
       }
+      .about-page{
+        display: grid;
+        grid-template-columns: auto;
+      }
+      
 }
 @media screen and (max-width:800px) {
     nav ul li{
@@ -99,6 +104,7 @@
         font-size: 30px;
         width: 250px;
       }
+      
 }
 @media screen and (max-width:700px) {
     .start{

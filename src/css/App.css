@@ -230,13 +230,30 @@ nav .navbar-brand:hover{
 .about-page{
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),url('../media/gamers.jpg') no-repeat top;
   background-size: cover;
-  position: fixed;
+  position: relative;
   bottom: 0;
   z-index: -10;
   top: 70px;
   left: 0;
   right: 0;
-  padding: 20px 0 0 5%;
+  display: grid;
+  grid-template-columns: 600px auto;
+  column-gap: 20px;
+  padding: 20px 20px 50px 5%;
+}
+.about-page:hover{
+  color: #f2f2f2;
+}
+.about-page .grid-about1{
+  display: flex;
+  flex-direction: column;
+  
+}
+.about-page img, .about-page video{
+  cursor: pointer;
+  width: 80%;
+  padding-top: 10px;
+  border-radius: 10px;
 }
 /* footer */
 footer{
